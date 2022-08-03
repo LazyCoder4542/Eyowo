@@ -1,0 +1,19 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="182" height="178" viewBox="0 0 182 178" fill="none">
+<g opacity="0.32">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="182" height="178">
+<path d="M0 178L-7.78063e-06 1.52588e-05L162 8.17754e-06C173.046 7.69472e-06 182 8.95431 182 20L182 178L0 178Z" fill="#1B9066"/>
+</mask>
+<g mask="url(#mask0)">
+<circle cx="162.5" cy="21.4995" r="108" transform="rotate(-90 162.5 21.4995)" stroke="#F99650"/>
+<circle cx="162.5" cy="21.4993" r="97.0127" transform="rotate(-90 162.5 21.4993)" stroke="#F99650"/>
+<circle cx="162.501" cy="21.4988" r="86.0253" transform="rotate(-90 162.501 21.4988)" stroke="#F99650"/>
+<circle cx="162.501" cy="21.4986" r="75.038" transform="rotate(-90 162.501 21.4986)" stroke="#F99650"/>
+<circle cx="162.501" cy="21.4982" r="64.0506" transform="rotate(-90 162.501 21.4982)" stroke="#F99650"/>
+<circle cx="162.502" cy="21.498" r="53.0633" transform="rotate(-90 162.502 21.498)" stroke="#F99650"/>
+<circle cx="162.499" cy="21.5007" r="42.076" transform="rotate(-90 162.499 21.5007)" stroke="#F99650"/>
+<circle cx="162.499" cy="21.5005" r="31.0886" transform="rotate(-90 162.499 21.5005)" stroke="#F99650"/>
+<circle cx="162.5" cy="21.5001" r="20.1013" transform="rotate(-90 162.5 21.5001)" stroke="#F99650"/>
+<circle cx="162.5" cy="21.4998" r="9.11392" transform="rotate(-90 162.5 21.4998)" stroke="#F99650"/>
+</g>
+</g>
+</svg>
