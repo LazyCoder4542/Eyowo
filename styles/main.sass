@@ -114,7 +114,7 @@ p
             border-radius: 10px
             header
                 display: flex
-                padding: calc(var(--page-margin) - 8px)
+                padding: calc(20px - 8px)
                 justify-content: space-between
                 place-items: center
                 .icon
@@ -158,6 +158,10 @@ p
                         span:not(ul span)::after
                             background-image: url(../images/minus.svg)
                 div.help-links
+                    li
+                        img
+                            display: inline
+                            margin-right: 20px
 #container
     width: 100%
     section
@@ -174,10 +178,10 @@ p
                 margin-bottom: 4rem
         .overflow-x
             margin:
-                left: -12px
-                right: -12px
+                left: calc(-0.5 * var(--page-margin))
+                right: calc(-0.5 * var(--page-margin))
             background-color: var(--clr-neutral-light1)
-            padding: 5.5rem 12px 3.75rem
+            padding: 5.5rem calc(0.5 * var(--page-margin)) 3.75rem
         .wrapper
             //overflow: hidden
             display: grid
@@ -200,6 +204,7 @@ p
                     display: flex
                     justify-content: center
                     img
+                        width: auto
                         object-fit: contain
                 .btn
                     position: absolute
@@ -342,6 +347,12 @@ section#grow
                 background-size: 200px
                 p.top
                     color: var(--clr-neutral-dark1)
+                h3
+                    span
+                        animation: pulse 5s ease-out infinite
+                        &::after
+                            animation: text-swap 10s ease-out infinite
+                            content: ""
                 div
                     margin-top: 3rem
                     img
@@ -614,7 +625,18 @@ section#get-app
     100%
         transform: translateX(-50%) scale(0.95)
         opacity: 0
-        
+@keyframes text-swap
+    0%
+        content: "car"
+    49.9%
+        content: "car"
+    50%
+        content: "house"
+    99.9%
+        content: "house"
+    100%
+        content: "car"
+
 .btn
     font-weight: 500
     padding: 1rem 1.5rem
@@ -639,11 +661,46 @@ section#get-app
 .btn-sec
     background-color: var(--clr-primary1)
 @media screen and ( min-width: 641px )
-    html
-        font-size: 150% !important
-    /*h1, h2
+    :root
+        --page-margin: 32px
+    h1, h2
         font-size: 3rem
-    /*h3
+    h3
         font-size: 2.5rem
-    /*p
+    p
         font-size: 1.25rem
+    #container
+        section
+            & + section
+                margin-bottom: 4rem
+            .wrapper
+                .bg-cards
+                    padding: 3rem
+                    p.top
+                        font-size: 1.125rem
+                        font-weight: 600
+                        margin-bottom: 2rem
+                    span:not(h3 span)
+                        font-size: 2rem
+                        //font-weight: 600
+                        //display: block
+                        //line-height: 140%
+                        //margin-bottom: 1.75rem
+    section#go
+        .wrapper
+            .bg-cards:nth-child(1)
+                div
+                    img
+                        height: 376px
+    section#grow
+        .wrapper
+            .bg-cards:nth-child(2)
+                p.top
+                    font-size: 1.25rem
+    section#features
+        .header
+            span
+                font-size: 2.25rem
+    section#certification
+        span
+            font-size: 2rem

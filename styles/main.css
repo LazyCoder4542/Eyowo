@@ -144,7 +144,7 @@ p {
 }
 #site-header .menu.open .box-wrapper header {
   display: flex;
-  padding: calc(var(--page-margin) - 8px);
+  padding: 12px;
   justify-content: space-between;
   place-items: center;
 }
@@ -191,6 +191,11 @@ p {
 #site-header .menu.open .box-wrapper section.accordion div.active span:not(ul span)::after {
   background-image: url(../images/minus.svg);
 }
+#site-header .menu.open .box-wrapper section.accordion div.help-links li img {
+  display: inline;
+  margin-right: 20px;
+}
+
 #container {
   width: 100%;
 }
@@ -209,10 +214,10 @@ p {
   margin-bottom: 4rem;
 }
 #container section .overflow-x {
-  margin-left: -12px;
-  margin-right: -12px;
+  margin-left: calc(-0.5 * var(--page-margin));
+  margin-right: calc(-0.5 * var(--page-margin));
   background-color: var(--clr-neutral-light1);
-  padding: 5.5rem 12px 3.75rem;
+  padding: 5.5rem calc(0.5 * var(--page-margin)) 3.75rem;
 }
 #container section .wrapper {
   display: grid;
@@ -239,6 +244,7 @@ p {
   justify-content: center;
 }
 #container section .wrapper .bg-cards div img {
+  width: auto;
   object-fit: contain;
 }
 #container section .wrapper .bg-cards .btn {
@@ -423,6 +429,13 @@ section#grow .wrapper .bg-cards:nth-child(1) {
 }
 section#grow .wrapper .bg-cards:nth-child(1) p.top {
   color: var(--clr-neutral-dark1);
+}
+section#grow .wrapper .bg-cards:nth-child(1) h3 span {
+  animation: pulse 5s ease-out infinite;
+}
+section#grow .wrapper .bg-cards:nth-child(1) h3 span::after {
+  animation: text-swap 10s ease-out infinite;
+  content: "";
 }
 section#grow .wrapper .bg-cards:nth-child(1) div {
   margin-top: 3rem;
@@ -760,6 +773,23 @@ section#get-app button {
     opacity: 0;
   }
 }
+@keyframes text-swap {
+  0% {
+    content: "car";
+  }
+  49.9% {
+    content: "car";
+  }
+  50% {
+    content: "house";
+  }
+  99.9% {
+    content: "house";
+  }
+  100% {
+    content: "car";
+  }
+}
 .btn {
   font-weight: 500;
   padding: 1rem 1.5rem;
@@ -796,13 +826,42 @@ section#get-app button {
 }
 
 @media screen and (min-width: 641px) {
-  html {
-    font-size: 150% !important;
+  :root {
+    --page-margin: 32px;
   }
-  /*h1, h2
-  *  font-size: 3rem */
-  /*h3
-  *  font-size: 2.5rem */
-  /*p
-  *  font-size: 1.25rem */
+  h1, h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+  #container section + section {
+    margin-bottom: 4rem;
+  }
+  #container section .wrapper .bg-cards {
+    padding: 3rem;
+  }
+  #container section .wrapper .bg-cards p.top {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  #container section .wrapper .bg-cards span:not(h3 span) {
+    font-size: 2rem;
+  }
+  section#go .wrapper .bg-cards:nth-child(1) div img {
+    height: 376px;
+  }
+  section#grow .wrapper .bg-cards:nth-child(2) p.top {
+    font-size: 1.25rem;
+  }
+  section#features .header span {
+    font-size: 2.25rem;
+  }
+  section#certification span {
+    font-size: 2rem;
+  }
 }
