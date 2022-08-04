@@ -13,21 +13,26 @@ $(document).ready(function () {
     setInterval(() => {
         j++;
         $('#grow .bg-cards .dream-pic img').removeClass('active');
+        $('#grow .bg-cards h3 span').removeClass('active');
         $('#grow .bg-cards .dream-pic img').get(j % 2).classList.add('active');
+        $('#grow .bg-cards h3 span').get(j % 2).classList.add('active');
     }, 5000);
-
-    accordion($('section.accordion')[0])
-    function accordion(elem) {
-        //document.querySelector().childre
+    $('section.accordion').each(function () {
+        accordion(this, 100)
+    })
+    function accordion(elem, time) {
         [...elem.children].forEach((list, index) => {
             list.querySelector('span').addEventListener('click', () => {
                 if (list.classList.contains('active') == false) {
                     [...elem.children].forEach(child => {
+                        $(child.querySelector('ul')).slideUp(time)
                         child.classList.remove('active')
                     })
+                    $(list.querySelector('ul')).slideDown(time)
                     list.classList.add('active')
                 }
                 else {
+                    $(list.querySelector('ul')).slideUp(time)
                     list.classList.remove('active')
                 }
             })
