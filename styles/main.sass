@@ -105,6 +105,26 @@ p
                         li
                             svg, small
                                 display: none !important
+                        ul li
+                            padding: 10px
+                            border-radius: 10px
+                            transition-property: background-color
+                            transition-duration: 500ms
+                            transition-delay: 100ms
+                            &:hover
+                                background-color: #fcf7f4
+                &:nth-of-type(2)
+                    div
+                        ul
+                            li
+                                padding: 10px
+                                border-radius: 10px
+                                transition-property: background-color
+                                transition-duration: 500ms
+                                transition-delay: 100ms
+                                &:hover
+                                    background-color: #fcf7f4
+
             section.buttons
                 padding: 0.75rem
                 border-top: 1px solid hsla(0,0%,76.9%,0.560784)
@@ -889,21 +909,29 @@ section#get-app
                     display: flex
                     &:nth-of-type(2)
                         justify-content: flex-end
+                        div ul:not(ul ul)
+                            right: 2rem
                     div
                         &:hover
                             ul:not(ul ul)
-                                //display: grid !important
                                 visibility: visible
                                 opacity: 1
                                 z-index: 1
+                            span:not(ul span)
+                                background-color: #fcf7f4
+                                color: var(--clr-primary1)
                         span:not(ul span)
-                            padding: 12px
+                            font-weight: 500
+                            color: var(--clr-neutral-dark4)
+                            border-radius: 9px
+                            padding: 10px 24px
+                            transition-property: background-color, color
+                            transition-duration: 500ms
+                            transition-delay: 100ms
                             &::after
                                 all: unset
                         ul:not(ul ul)
-                            visibility: visible
-                            opacity:1
-                        ul:not(ul ul)
+                            width: max-content
                             transition-property: opacity
                             transition-duration: 1000ms
                             transition-delay: 100ms
@@ -915,10 +943,15 @@ section#get-app
                             position: absolute
                             visibility: hidden
                             grid-auto-flow: column
-                            //opacity: 0
                             background-color: white
                             li:not(ul li)
                                 padding: 10px
+                            li
+                                span
+                                    margin-bottom: 1rem
+                        ul
+                            gap: 1.5rem 2rem
+                            display: grid
                 section.buttons
                     padding: 0
                     border: none

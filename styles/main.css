@@ -130,6 +130,26 @@ p {
 #site-header .menu .box-wrapper section.accordion div ul li svg, #site-header .menu .box-wrapper section.accordion div ul li small {
   display: none !important;
 }
+#site-header .menu .box-wrapper section.accordion div ul ul li {
+  padding: 10px;
+  border-radius: 10px;
+  transition-property: background-color;
+  transition-duration: 500ms;
+  transition-delay: 100ms;
+}
+#site-header .menu .box-wrapper section.accordion div ul ul li:hover {
+  background-color: #fcf7f4;
+}
+#site-header .menu .box-wrapper section.accordion:nth-of-type(2) div ul li {
+  padding: 10px;
+  border-radius: 10px;
+  transition-property: background-color;
+  transition-duration: 500ms;
+  transition-delay: 100ms;
+}
+#site-header .menu .box-wrapper section.accordion:nth-of-type(2) div ul li:hover {
+  background-color: #fcf7f4;
+}
 #site-header .menu .box-wrapper section.buttons {
   padding: 0.75rem;
   border-top: 1px solid hsla(0deg, 0%, 76.9%, 0.560784);
@@ -1067,22 +1087,32 @@ section#get-app button {
   #site-header .menu .box-wrapper section.accordion:nth-of-type(2) {
     justify-content: flex-end;
   }
+  #site-header .menu .box-wrapper section.accordion:nth-of-type(2) div ul:not(ul ul) {
+    right: 2rem;
+  }
   #site-header .menu .box-wrapper section.accordion div:hover ul:not(ul ul) {
     visibility: visible;
     opacity: 1;
     z-index: 1;
   }
+  #site-header .menu .box-wrapper section.accordion div:hover span:not(ul span) {
+    background-color: #fcf7f4;
+    color: var(--clr-primary1);
+  }
   #site-header .menu .box-wrapper section.accordion div span:not(ul span) {
-    padding: 12px;
+    font-weight: 500;
+    color: var(--clr-neutral-dark4);
+    border-radius: 9px;
+    padding: 10px 24px;
+    transition-property: background-color, color;
+    transition-duration: 500ms;
+    transition-delay: 100ms;
   }
   #site-header .menu .box-wrapper section.accordion div span:not(ul span)::after {
     all: unset;
   }
   #site-header .menu .box-wrapper section.accordion div ul:not(ul ul) {
-    visibility: visible;
-    opacity: 1;
-  }
-  #site-header .menu .box-wrapper section.accordion div ul:not(ul ul) {
+    width: max-content;
     transition-property: opacity;
     transition-duration: 1000ms;
     transition-delay: 100ms;
@@ -1098,6 +1128,13 @@ section#get-app button {
   }
   #site-header .menu .box-wrapper section.accordion div ul:not(ul ul) li:not(ul li) {
     padding: 10px;
+  }
+  #site-header .menu .box-wrapper section.accordion div ul:not(ul ul) li span {
+    margin-bottom: 1rem;
+  }
+  #site-header .menu .box-wrapper section.accordion div ul {
+    gap: 1.5rem 2rem;
+    display: grid;
   }
   #site-header .menu .box-wrapper section.buttons {
     padding: 0;
