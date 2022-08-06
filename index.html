@@ -10,11 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="import" href="temp/UI Kit/css/uikit.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/aos.css">
 </head>
 
-<body>
+<body data-aos-easing="ease" data-aos-duration="500" data-aos-delay="0">
     <header id="site-header">
         <div class="icon">
             <img src="images/eyowo-logo.svg" alt="eyowo">
@@ -478,7 +479,8 @@
                     <h2>You're good to <span>go</span></h2>
                 </header>
                 <div class="wrapper">
-                    <div class="bg-cards">
+                    <div class="bg-cards aos-init" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100"
+                        data-aos-delay="200">
                         <div>
                             <p class="top">
                                 Personal and business accounts
@@ -510,11 +512,12 @@
                             </button>
                         </div>
 
-                        <div>
+                        <div class="aos-init" data-aos="fade-up" data-aos-delay="400">
                             <img src="images/phone_hand.png" alt="hand with phone">
                         </div>
                     </div>
-                    <div class="bg-cards">
+                    <div class="bg-cards aos-init" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100"
+                        data-aos-delay="200">
                         <div>
                             <p class="top">
                                 Send money to anyone
@@ -542,11 +545,12 @@
                             </button>
                         </div>
 
-                        <div>
+                        <div class="aos-init" data-aos="fade-up" data-aos-delay="400">
                             <img src="images/phone_notification.png" alt="phone notification">
                         </div>
                     </div>
-                    <div class="bg-cards">
+                    <div class="bg-cards aos-init" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100"
+                        data-aos-delay="200">
                         <div class="profiles">
                             <div class="little-card">
                                 <img src="images/collage-0.jpg" alt>
@@ -564,8 +568,9 @@
                             Requests, or Payment links.
                         </p>
                     </div>
-                    <div class="bg-cards">
-                        <div>
+                    <div class="bg-cards aos-init" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100"
+                        data-aos-delay="200">
+                        <div class="aos-init" data-aos="fade-down" data-aos-offset="0" data-aos-delay="200">
                             <img src="images/card.svg" alt>
                         </div>
                         <span>No number. No case. Slide in. Get Deals.</span>
@@ -576,7 +581,7 @@
                         </p>
                     </div>
                 </div>
-                <button class="btn btn-main">
+                <button class="btn btn-main aos-init" data-aos="fade-top" data-aos-offset="0" data-aos-delay="200">
                     Tools to GO wth Eyowo.
                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="icon-20"
                         width="21" height="20">
@@ -602,7 +607,8 @@
                     <h2>You're good to <span>grow!</span></h2>
                 </header>
                 <div class="wrapper">
-                    <div class="bg-cards">
+                    <div class="bg-cards aos-init" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100"
+                        data-aos-delay="200">
                         <div>
                             <p class="top">
                                 Savings
@@ -640,17 +646,19 @@
                             <img src="images/house.png" alt>
                         </div>
                     </div>
-                    <div class="bg-cards">
+                    <div class="bg-cards aos-init" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100"
+                        data-aos-delay="200">
                         <p class="top">
                             Spend controls
                         </p>
                         <span>Control at your<br><span>fingertips.</span></span>
-                        <div>
+                        <div class="aos-init" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200">
                             <img src="images/carded.png" alt>
                         </div>
                     </div>
-                    <div class="bg-cards">
-                        <div>
+                    <div class="bg-cards aos-init" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100"
+                        data-aos-delay="200">
+                        <div class="aos-init" data-aos="fade-down" data-aos-offset="0" data-aos-delay="200">
                             <img src="images/dark_lower_phone.png" alt>
                         </div>
                         <span>If you love money, listen to it.</span>
@@ -680,19 +688,19 @@
                 </div>
             </div>
         </section>
-        <section id="features">
-            <div class="header">
+        <section id="features" uk-slider>
+            <div class="header aos-init" data-aos="fade-left" data-aos-offset="0" data-aos-delay="200">
                 <span>Explore Features</span>
                 <div class="slider-btn">
-                    <nav id="left">
+                    <nav id="left" uk-slidenav-previous uk-slider-item="previous">
                         <img src="images/arrow-left.svg" alt>
                     </nav>
-                    <nav id="right">
+                    <nav id="right" uk-slidenav-previous uk-slider-item="next">
                         <img src="images/arrow-right.svg" alt>
                     </nav>
                 </div>
             </div>
-            <ul class="slider">
+            <ul class="slider aos-init" data-aos="fade-left" data-aos-offset="0" data-aos-delay="300" uk-slider-items">
                 <li>
                     <div class="slider-image"><span>🙌🏼</span>
                         <h4>Send money to any phone number instantly. </h4>
@@ -776,11 +784,11 @@
                     </svg>
                 </button>
             </div>
-            <div>
+            <div class="aos-init" data-aos="fade-left" data-aos-offset="0" data-aos-delay="400">
                 <img src="images/computer-woman.png" alt="computer-woman">
             </div>
         </section>
-        <section id="get-app">
+        <section id="get-app" class="aos-init" data-aos="fade-top">
             <div>
                 <div class="logo">
                     <img src="images/eyowo logo white.svg" alt="eyowo">
@@ -790,7 +798,7 @@
                 </p>
                 <h3>Good to <span>Grow.</span><br>Good to Go.</h3>
             </div>
-            <div>
+            <div data-aos="fade-left" class="aos-init">
                 <button class="btn btn-sec2">
                     Get the app now, It's free
                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="icon-20"
@@ -877,8 +885,8 @@
         </div>
     </footer>
     <script src="temp/jquery-3.6.0.min.js"></script>
+    <script src="temp/UI Kit/js/uikit.min.js"></script>
     <script src="scripts/aos.js"></script>
-    <script src="scripts/infinite-scroll.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 
