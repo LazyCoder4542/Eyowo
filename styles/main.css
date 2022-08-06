@@ -215,7 +215,7 @@ p {
 
 #container {
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 #container section:not(#intro) {
   max-width: 720px;
@@ -637,7 +637,6 @@ section#dreams {
   background-color: #FCECE5;
   background-position: right center;
   background-size: auto 100%;
-  overflow: hidden;
 }
 section#dreams * {
   position: relative;
@@ -657,6 +656,7 @@ section#dreams div:nth-child(2) {
   z-index: 0;
 }
 section#dreams div:nth-child(2) img {
+  width: 100%;
   vertical-align: bottom;
 }
 section#dreams button {
