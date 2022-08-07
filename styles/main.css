@@ -235,8 +235,9 @@ p {
 
 #container section:not(#intro) {
   max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 var(--page-margin);
+  left: 50%;
+  transform: translateX(-55%);
 }
 #container section {
   overflow-x: hidden;
@@ -247,7 +248,7 @@ p {
   margin-bottom: 1.25rem;
 }
 #container section + section {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 #container section header h2 {
   text-align: center;
@@ -292,6 +293,7 @@ p {
 #container section .wrapper .bg-cards .btn {
   position: absolute;
   bottom: 1.5rem;
+  z-index: 1;
 }
 #container section .wrapper .bg-cards span:not(h3 span) {
   font-size: 1.5rem;
@@ -639,9 +641,9 @@ section#features .header .slider-btn nav svg {
 section#features .slider {
   color: white;
   display: flex;
-  column-gap: 20px;
 }
 section#features .slider li {
+  padding-right: 20px;
   list-style: none;
 }
 section#features .slider li .slider-image {

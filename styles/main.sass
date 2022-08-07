@@ -201,9 +201,9 @@ p
 #container
     section:not(#intro)
         max-width: 720px
-        margin:
-            left: auto
-            right: auto
+        margin: 0 var(--page-margin)
+        left: 50%
+        transform: translateX(-55%)
     section
         overflow-x: hidden
         position: relative
@@ -211,7 +211,7 @@ p
             margin-bottom: 1.25rem
         margin: 0px var(--page-margin)
         & + section
-            margin-bottom: 2rem
+            margin-bottom: 2rem !important
         header
             h2
                 text-align: center
@@ -251,6 +251,7 @@ p
                 .btn
                     position: absolute
                     bottom: 1.5rem
+                    z-index: 1
                 span:not(h3 span)
                     font-size: 1.5rem
                     font-weight: 600
@@ -539,10 +540,12 @@ section#features
     .slider
         color: white 
         display: flex
-        column-gap: 20px
+        //column-gap: 20px
         li
-            //padding-right: 20px
+            //transition: order 100ms
+            padding-right: 20px
             list-style: none
+            //touch-action: pan-y
             .slider-image
                 position: relative
                 width: 250px
