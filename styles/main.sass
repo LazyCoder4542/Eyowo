@@ -263,6 +263,7 @@ section#intro
     margin: 0
     padding: 3.5rem var(--page-margin)
     display: flex
+    background-color: rgba(255, 255, 255, 0.5)
     #canva
         position: absolute
         z-index: -1
@@ -273,19 +274,51 @@ section#intro
         overflow: hidden
         #coin-rain
             img
-                opacity: 0.4
-        .coins
+                width: 50px
+                transform: translateY(-100%)
+                opacity: 0.5
+                position: absolute
+                transform-origin: top
+                animation:
+                    timing-function: linear
+                    name: coin-rain
+                    iteration-count: infinite
+                &:nth-child(1)
+                    rotate: 90deg
+                    left: 5%
+                    animation:
+                        duration: 15000ms
+                        delay: 5000ms
+                &:nth-child(2)
+                    scale: 0.5
+                    left: 48%
+                    animation:
+                        duration: 5000ms
+                        delay: 10000ms
+                &:nth-child(3)
+                    scale: 1.5
+                    right: 5%
+                    animation:
+                        duration: 30000ms
+                        delay: 20000ms
+                    
+        .coins, .card
             position: absolute
             bottom: 0
-            left: 0
-            width: 35vw
-            transform-origin: 20% bottom
-            transform: scale(1.6)
+            width: 40vw
             img
                 max-height: 100%
                 max-width: 100%
+        .coins
+            left: 0
+            transform-origin: center bottom
+            transform: scale(1.3)
+            img
                 &:nth-child(1)
                     animation: coin-hover 2500ms ease-in-out alternate infinite
+        .card
+            right: 0
+
     .tagline
         text-align: center
         margin: auto
@@ -690,10 +723,16 @@ section#get-app
         content: "car"
 @keyframes coin-hover
     from
-        transform: translateY(20%)
+        transform: translateY(10%)
     to
         transform: translateY(-30%)
-        
+@keyframes coin-rain
+    0%
+        transfrom: translateY(-100%)
+        top: 0
+    100%
+        top: 100%
+        transform: translateY(0%)
 
 .btn
     font-weight: 500
