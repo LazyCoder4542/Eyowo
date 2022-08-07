@@ -315,6 +315,25 @@ section#intro #canva {
   height: 100%;
   top: 0;
   left: 0;
+  overflow: hidden;
+}
+section#intro #canva #coin-rain img {
+  opacity: 0.4;
+}
+section#intro #canva .coins {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35vw;
+  transform-origin: 20% bottom;
+  transform: scale(1.6);
+}
+section#intro #canva .coins img {
+  max-height: 100%;
+  max-width: 100%;
+}
+section#intro #canva .coins img:nth-child(1) {
+  animation: coin-hover 2500ms ease-in-out alternate infinite;
 }
 section#intro .tagline {
   text-align: center;
@@ -822,6 +841,14 @@ section#get-app button {
  *      content: "house"
  *  100%
  *      content: "car" */
+@keyframes coin-hover {
+  from {
+    transform: translateY(20%);
+  }
+  to {
+    transform: translateY(-30%);
+  }
+}
 .btn {
   font-weight: 500;
   padding: 1rem 1.5rem;
