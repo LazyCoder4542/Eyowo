@@ -199,12 +199,14 @@ p
                             display: inline
                             margin-right: 20px
 #container
+    margin: 0 var(--page-margin)
     section:not(#intro)
         max-width: 720px
-        margin: 0 var(--page-margin)
-        left: 50%
-        transform: translateX(-55%)
+        margin:
+            right: auto
+            left: auto
     section
+        width: 100%
         overflow-x: hidden
         position: relative
         h3
@@ -538,14 +540,11 @@ section#features
                 svg
                     display: none
     .slider
+        all: unset
         color: white 
         display: flex
-        //column-gap: 20px
         li
-            //transition: order 100ms
             padding-right: 20px
-            list-style: none
-            //touch-action: pan-y
             .slider-image
                 position: relative
                 width: 250px
