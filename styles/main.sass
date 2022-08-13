@@ -199,19 +199,18 @@ p
                             display: inline
                             margin-right: 20px
 #container
-    margin: 0 var(--page-margin)
+    display: flex
+    flex-direction: column
     section:not(#intro)
+        margin: 0px var(--page-margin)
         max-width: 720px
-        margin:
-            right: auto
-            left: auto
+        place-self: center
     section
         width: 100%
         overflow-x: hidden
         position: relative
         h3
             margin-bottom: 1.25rem
-        margin: 0px var(--page-margin)
         & + section
             margin-bottom: 2rem !important
         header
@@ -540,7 +539,6 @@ section#features
                 svg
                     display: none
     .slider
-        all: unset
         color: white 
         display: flex
         li
@@ -927,6 +925,7 @@ section#get-app
                     flex-shrink: 0
                     flex-basis: 50%
                     display: flex
+                    place-self: center
                     align-items: flex-end
                     img
                         translate: 0 30px 
@@ -945,6 +944,14 @@ section#get-app
             opacity: 1
         100%
             transform: translateX(-50%) scale(0.95)
+    section#features
+        display: flex
+        .header
+            flex-direction: column
+            padding:
+                right: 4rem
+        .wrapper
+            overflow: hidden
 @media screen and ( min-width: 960px )
     body
         width: 100%
@@ -1031,4 +1038,25 @@ section#get-app
         margin-bottom: 5rem
         min-height: calc(100vh - 130px)
     
-/*@media screen and ( min-width: 1200px )
+@media screen and ( min-width: 1200px )
+    #container
+        section:not(#intro)
+            max-width: none !important
+            width: calc( 100% - 2*var(--page-margin) )
+        section#go, section#grow
+            max-width: 960px !important
+    section#intro
+        background-color: transparent
+        #canva
+            .coins
+                width: 250px
+            .card
+                width: 300px
+    section#dreams
+        div:nth-child(2)
+            height: 100%
+            img
+                max-height: 100%
+    section#get-app
+        box-sizing: content-box
+        width: 980px

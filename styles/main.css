@@ -234,18 +234,18 @@ p {
 }
 
 #container {
-  margin: 0 var(--page-margin);
+  display: flex;
+  flex-direction: column;
 }
 #container section:not(#intro) {
+  margin: 0px var(--page-margin);
   max-width: 720px;
-  margin-right: auto;
-  margin-left: auto;
+  place-self: center;
 }
 #container section {
   width: 100%;
   overflow-x: hidden;
   position: relative;
-  margin: 0px var(--page-margin);
 }
 #container section h3 {
   margin-bottom: 1.25rem;
@@ -642,7 +642,6 @@ section#features .header .slider-btn nav svg {
   display: none;
 }
 section#features .slider {
-  all: unset;
   color: white;
   display: flex;
 }
@@ -1100,6 +1099,7 @@ section#get-app button {
     flex-shrink: 0;
     flex-basis: 50%;
     display: flex;
+    place-self: center;
     align-items: flex-end;
   }
   section#grow .wrapper .bg-cards:nth-child(1) .dream-pic img {
@@ -1125,6 +1125,16 @@ section#get-app button {
     100% {
       transform: translateX(-50%) scale(0.95);
     }
+  }
+  section#features {
+    display: flex;
+  }
+  section#features .header {
+    flex-direction: column;
+    padding-right: 4rem;
+  }
+  section#features .wrapper {
+    overflow: hidden;
   }
 }
 @media screen and (min-width: 960px) {
@@ -1229,4 +1239,31 @@ section#get-app button {
     min-height: calc(100vh - 130px);
   }
 }
-/*@media screen and ( min-width: 1200px ) */
+@media screen and (min-width: 1200px) {
+  #container section:not(#intro) {
+    max-width: none !important;
+    width: calc(100% - 2 * var(--page-margin));
+  }
+  #container section#go, #container section#grow {
+    max-width: 960px !important;
+  }
+  section#intro {
+    background-color: transparent;
+  }
+  section#intro #canva .coins {
+    width: 250px;
+  }
+  section#intro #canva .card {
+    width: 300px;
+  }
+  section#dreams div:nth-child(2) {
+    height: 100%;
+  }
+  section#dreams div:nth-child(2) img {
+    max-height: 100%;
+  }
+  section#get-app {
+    box-sizing: content-box;
+    width: 980px;
+  }
+}
